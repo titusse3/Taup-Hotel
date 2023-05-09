@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <img src="/img/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px"/>
+        <img src="taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px"/>
         <h1>Taup'Hotel</h1>
         <button class="recherche-button">Recherche</button>
         <button>Sign in</button>
