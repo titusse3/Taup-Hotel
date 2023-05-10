@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+@import url('./header.css');
+@import url('./footer.css');
+body {
+    margin : 0;
+}
+
+.carouselle {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.carouselle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.carouselle div{
+    display: flex;
+    margin-bottom: 2%;
+    gap: 30px;
+}
+.carouselle button {
+    background-color: white;
+    height: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.active {
+    background-color: rgb(178, 180, 243) !important;
+}
+
+
+.us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -9;
+    background-color: rgb(254, 252, 254);
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.us div{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 60%;
+    position: relative;
+    z-index: -8;
+}
+.us div div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    height: 80%;
+    z-index: -4;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.2);
+    margin-left: 100px;
+}
+#bck-us{
+    position: absolute;
+    width: 55%;
+    height: 90%;
+    background-image: url('../image/bck1.jpg');
+    background-size: cover;
+    background-position: 50%;
+    right: 0;
+    z-index: -7
+}
+.us h2{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-family: 'Poppins';
+    font-size: 1.7em;
+    text-align: center;
+}
+.us p{
+    font-size: 1.3em;
+    font-family: sans-serif;
+}
