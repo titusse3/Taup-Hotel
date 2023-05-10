@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 header {
     position: fixed;
     display : flex;
@@ -7,6 +8,7 @@ header {
     color: white;
     backdrop-filter: blur(8px);
     background-color: rgba(8, 6, 6, 0.2);
+    z-index: 100;
 }
 .h-on {
     transition: all 1s;
@@ -29,7 +31,6 @@ header a {
     text-align: center;
     font-family: 'Sans-serif';
     font-weight: normal;
-    /* cursor: pointer; */
 }
 .recherche-button {
     position: relative;
