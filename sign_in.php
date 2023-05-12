@@ -4,60 +4,37 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/sign_up.css" />
+    <link rel="stylesheet" href="./css/sign.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <header class="h-off h-on">
-        <div class="site-logo">
-            <img src="image/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
-            <h1>Taup'Hotel</h1>
-        </div>
-        <a class="recherche-button">
-            Recherche
-            <img src="image/search.svg" alt="Loupe de recherche" />
-        </a>
-        <div class="sig-iu">
-            <a>Sign in</a>
-            <a>Sign up</a>
-        </div>
-    </header>
+    <?php 
+        include_once 'header.php';
+    ?>
     <main>
         <section>
-            <div>
-                <h3>Connecter vous</h3>
-                <input placeholder="Email"/>
-                <input placeholder="Mot de passe"/>
-                <input placeholder="Confirmation mot de passe"/>
+            <form>
+                <h3>Insrivez vous</h3>
+                <input placeholder="Nom" name="name" required/>
+                <input placeholder="Prenom" name="firstname" required/>
+                <input placeholder="Email" name="email" required/>
+                <input placeholder="Mot de passe" name="password" required/>
+                <input placeholder="Confirmation mot de passe" required/>
+                <div>
+                    <p>Erreur ahi jkdlqjflmkqj mlkfdjsqfmjqjfklqjflkmdsqjf mlkjqflkdqjflmk jqfmlkjfqsfdj sdlmkqj</p>
+                    <ul>
+                        <li>Bonjour </li>
+                        <li>aurevoir</li>
+                    </ul>
+                </div>
                 <input type="submit" value="Connection" />
-            </div>
+            </form>
         </section>
     </main>
-    <footer>
-        <div>
-            <div class="site-logo">
-                <img src="image/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
-                <h1>Taup'Hotel</h1>
-            </div>
-            <nav>
-                <div>
-                    <a href="/Taup-Hotel/home.php">Home</a>
-                </div>
-                <div>
-                    <a>Annonce</a>
-                    <a>Search</a>
-                    <a>Post</a>
-                </div>
-                <div>
-                    <a>Account</a>
-                    <a href="/Taup-Hotel/sign_in.php">Sign in</a>
-                    <a href="/Taup-Hotel/sign_up.php">Sign up</a>
-                </div>
-            </nav>
-        </div>
-        <h2>&copy; 2023 SageBot, Inc.</h2>
-    </footer>
+    <?php
+        include_once 'footer.php';
+    ?>
 </body>
 
 </html>

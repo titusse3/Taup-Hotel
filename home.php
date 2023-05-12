@@ -11,20 +11,9 @@
 </head>
 
 <body>
-    <header class="h-off">
-        <div class="site-logo">
-            <img src="image/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
-            <h1>Taup'Hotel</h1>
-        </div>
-        <a class="recherche-button">
-            Recherche
-            <img src="image/search.svg" alt="Loupe de recherche" /> <!-- a changer -->
-        </a>
-        <div class="sig-iu">
-            <a>Sign in</a>
-            <a>Sign up</a>
-        </div>
-    </header>
+    <?php 
+        include_once 'header.php';
+    ?>
     <main>
         <section class="carouselle">
             <div>
@@ -57,7 +46,7 @@
         </section>
     </main>
     <?php
-        include 'footer.php';
+        include_once 'footer.php';
     ?>
 </body>
 

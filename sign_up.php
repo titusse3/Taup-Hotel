@@ -4,33 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/sign_up.css" />
+    <link rel="stylesheet" href="./css/sign.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <header class="h-off h-on">
-        <div class="site-logo">
-            <img src="image/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
-            <h1>Taup'Hotel</h1>
-        </div>
-        <a class="recherche-button">
-            Recherche
-            <img src="image/search.svg" alt="Loupe de recherche" />
-        </a>
-        <div class="sig-iu">
-            <a>Sign in</a>
-            <a>Sign up</a>
-        </div>
-    </header>
+    <?php 
+        include_once 'header.php';
+    ?>
     <main>
         <section>
-            <div>
+            <form>
                 <h3>Connecter vous</h3>
-                <input placeholder="Email"/>
-                <input placeholder="Mot de passe"/>
+                <input placeholder="Email" type="email" name="email" required/>
+                <input placeholder="Mot de passe" type="password" name="password" required/>
                 <input type="submit" value="Connection" />
-            </div>
+            </form>
         </section>
     </main>
     <?php

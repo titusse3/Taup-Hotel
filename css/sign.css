@@ -8,7 +8,11 @@ a {
     text-decoration: none;
 }
 
-.sig-iu > a:first-child, .sig-iu > a:last-child:hover {
+header {
+    background-color: white;
+    color: black;
+}
+.sig-iu > a:last-child, .sig-iu > a:last-child:hover {
     background-color: #efefef;
     color: black;
 }
@@ -27,7 +31,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-section div {
+section form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +66,7 @@ section input[type="submit"]:hover {
     transition: all 0.5s ease-out;
     cursor: pointer;
 }
-section div > input {
+section form > input {
     margin-top: 20px;
 }
 section h3 {
@@ -75,4 +79,30 @@ section h3 {
     width: 100%;
     border-bottom: 1px solid #949494;
     padding-bottom: 5px;
+}
+
+section div {
+    color: red;
+    margin:  2% 0 0 0;
+    font-family: sans-serif;
+    width: 15rem;
+    text-align: center;
+}
+section div ul {
+    list-style: none;
+    text-align: start;
+    color: red;
+}
+
+
+@keyframes shake {
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
 }
