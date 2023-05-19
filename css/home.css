@@ -87,3 +87,24 @@ body {
     font-size: 1.3em;
     font-family: sans-serif;
 }
+
+.hotel-show {
+    width: 100%;
+    height: 100vh;
+    background-color: #082D41;
+}
+
+
+#bck-us-reverse {
+    position: absolute;
+    width: 55%;
+    height: 90%;
+    background-size: cover;
+    background-position: 50%;
+    z-index: -7;
+    background-image: url('../image/bck2.jpg');
+    left: 0;
+}
+.us-reverse > div {
+    justify-content: flex-end;
+}

@@ -11,9 +11,10 @@
 <body>
     <?php 
         include_once 'header.php';
+        header_show();
     ?>
     <main>
-        <section>
+        <section class="top-section">
             <div class="info">
                 <h2>Le bourquer</h2>
                 <div class="info-1">
@@ -57,12 +58,14 @@
             </div>
         </section>
         <section class="chambre-section">
-            <h3>Chambre</h3>
+            <div class="title-chambre-section">
+                <h3>Chambre</h3>
+            </div>
             <div class="chambre-contain">
                 <div class="chambre-thing">
                     <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
-                    <div>
-                        <div>
+                    <div class="info-small">
+                        <div class="contain-info-small">
                             <h4>Nantes, France</h4>
                             <h4>
                                 <span class="icon">★</span>
@@ -72,7 +75,141 @@
                         <h4>88$ par nuit</h4>
                     </div>
                 </div>
+
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+                <div class="chambre-thing">
+                    <img src="image/img-h/ahiiiiiii.jpeg" alt="photo chambre"/>
+                    <div class="info-small">
+                        <div class="contain-info-small">
+                            <h4>Nantes, France</h4>
+                            <h4>
+                                <span class="icon">★</span>
+                                4,95
+                            </h4>
+                        </div>
+                        <h4>88$ par nuit</h4>
+                    </div>
+                </div>
+
+
             </div>
+
         </section>
     </main>
     <?php

@@ -1,0 +1,141 @@
+@import url('./header.css');
+@import url('./footer.css');
+body {
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    color: black;
+}
+main {
+    padding-top: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.search-barre-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-barre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 6vh;
+    background-color: #EBEBEB;
+    border-radius: 50px;
+    border: 2px solid #DDDDDD;
+    position: relative;
+
+    margin:3%;
+}
+.search-barre input {
+    font-size: 1.2em;
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding-left: 15px;
+    position: relative;
+    height: 60%;
+    position: relative;
+    z-index: 2;
+}
+.search-barre input::placeholder {
+    color: #000000;
+    opacity: .9;
+}
+.search-barre > input:not(.search-barre > div > input, .search-barre input[name="departure"]){
+    border-right: 1px solid #c2c9d6;
+}
+.search-barre > input:hover, .search-barre > input:focus {
+    z-index: 5;
+}
+.search-barre > input:hover{
+    border-radius: 0;
+    background-color: #BCBCBC;
+    height: 100%;
+}
+.search-barre input:not(.search-barre input[name="bed"], .search-barre input[type="submit"]):focus {
+    background-color: white;
+    height: 105%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.search-barre input[name="dest"], .search-barre input[name="name"]  {
+    width: 28.75%;
+}
+.search-barre input[name="dest"] {
+    border-radius: 50px 0 0 50px;
+}
+.search-barre input[type="date"] {
+    width: 12.5%;
+}
+.search-barre input[name="bed"] {
+    width: 28.6%;
+    background: inherit;
+}
+.search-barre input[type="submit"] {
+    text-align: center;
+    background-color: inherit;
+    padding: 0;
+    color: inherit;
+}
+.left-search {
+    display: flex;
+    width: 17.5%;
+    align-items: center;
+    gap: 5%;
+    background-color: white;
+    height: 110%;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: .5%;
+    padding-right: .75%;
+    width: 17.5%;
+    margin-left: 1%;
+}
+.recherche-button-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 71.4%;
+    padding: 7%;
+    background-color: #FF385C;
+    border-radius: 50px;
+    overflow: hidden;
+    color: white;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.annonce {
+    border-top: 1px solid #EBEBEB;
+    min-height: 84vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.filter div {
+    display: flex;
+}
+.contain-annonce {
+    display: grid;
+    grid-template-columns: 6;
+    width: 100%;
+}

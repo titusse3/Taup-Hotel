@@ -1,30 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 header {
+    width: 100%;
+    height: 10vh;
     position: fixed;
     display : flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     color: white;
     backdrop-filter: blur(8px);
     background-color: rgba(8, 6, 6, 0.2);
     z-index: 100;
 }
+/* style de l'animation d'apparition du header */
 .h-on {
     transition: all 1s;
     background-color: white !important;
     color : black !important;
 }
-.h-on a{
+.h-on a:not(.site-logo){
     box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.2) !important;
 }
-header a {
+/* style des trois bouttons dans la version complète du header */
+header > div > a, header > a:not(.site-logo) {
     background-color: white;
-    font-size: 17px;
+    font-size: 1.05em;
     box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.4);
     border-radius: 45px;
     color: black;
-    font-weight: bolder;
     text-align: right;
     padding : 10px;
     margin: 20px;
@@ -32,18 +34,15 @@ header a {
     font-family: 'Sans-serif';
     font-weight: normal;
 }
-.recherche-button {
+#recherche-button {
     position: relative;
     width: 12%;
 }
-.recherche-button img {
+#recherche-button img {
     float: right;
     position: absolute;
     margin-left: 5px;
     border-left: 1px solid black;
-}
-.recherche-button img {
-    position: absolute; 
     right: 10px; 
     top: 50%; 
     transform: translateY(-50%);
@@ -52,7 +51,7 @@ header a {
     z-index: 5;
     padding: 4px;
 }
-header a:hover:not(.recherche-button) {
+header a:hover:not(#recherche-button, .site-logo) {
     color : white;
     background-color : rgb(115, 156, 246);
     transition: all 0.5s ease-out;
@@ -64,11 +63,9 @@ header a:hover:not(.recherche-button) {
     left: 1%;
     font-family: 'Poppins';
 }
-
 .site-logo > img {
     border-radius: 50%;
 }
-
 .sig-iu {
     display: flex;
     position: absolute;
@@ -77,4 +74,32 @@ header a:hover:not(.recherche-button) {
 }
 .sig-iu a {
     width: 80px;
+}
+
+@media screen and (orientation: portrait) {
+    .sig-iu, header > .site-logo > h1 {
+        display: none;
+    }
+    header {
+        height: 11vh;
+    }
+    header > .site-logo {
+        width: 20%;
+        margin-left: 2%;
+    }
+    header > .site-logo img {
+        width: 90%;
+        height: 90%;
+    }
+    #recherche-button {
+        width: 60%;
+        font-size: 2.4em;
+        margin-left: 22%;
+    }
+    #recherche-button img {
+        min-width: 60px;
+        min-height: 60px;
+        border-left: 2px solid black;
+        padding-left: 10px;
+    }
 }

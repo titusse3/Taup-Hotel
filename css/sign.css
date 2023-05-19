@@ -12,9 +12,9 @@ header {
     background-color: white;
     color: black;
 }
-.sig-iu > a:last-child, .sig-iu > a:last-child:hover {
-    background-color: #efefef;
-    color: black;
+.disable-sign, .disable-sign:hover {
+    background-color: #efefef !important;
+    color: black !important;
 }
 
 main {

@@ -11,6 +11,7 @@
 <body>
     <?php 
         include_once 'header.php';
+        header_show(false, false, false, true);
     ?>
     <main>
         <section>

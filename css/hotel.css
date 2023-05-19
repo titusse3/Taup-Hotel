@@ -8,17 +8,13 @@ header {
     background-color: white;
     color: black;
 }
-.sig-iu > a:last-child, .sig-iu > a:last-child:hover {
-    background-color: #efefef; 
-    color: black;
-}
 h2 {
     margin: 0;
     font-family: 'Poppins';
     font-size: 3.5em;
     margin-top: 1%;
 }
-main section:first-child {
+.top-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +45,7 @@ main {
     align-items: center;
     width: 100%;
 }
-section:first-child, section:last-child {
+.top-section, .chambre-section {
     width: 92%;
     height: 100vh;
     background-color:  #b2c8d4;
@@ -105,13 +101,10 @@ section:first-child, section:last-child {
     height: 100%;
     object-fit: cover;
 }
-section:nth-child(2) {
+.descrition {
     width: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
-    /* height: 50vh; */
-}
-.descrition {
     width: 100%;
     gap: 60px;
     /* height: 30vh; */
@@ -141,22 +134,34 @@ section:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
 }
-.chambre-section h3 {
-    height: 20%;
+.title-chambre-section {
+    height: 15%;
     width: 90%;
+    display: flex;
+    align-items: center;
+}
+.title-chambre-section h3 {
     margin: 0;
+    font-family: 'Poppins';
+    font-size: 3.5em;
 }
 .chambre-contain {
+    padding-top: 1%;
     width: 90%;
-    height: 80%;
-    background-color: red;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    gap: 1%;
+    justify-content: center;
+    background-color: #efefef;
+    border-radius: 10px 10px 0 0;
 }
 .chambre-thing {
     width: 300px;
-    height: 400px;
-    background-color: green;
+    height: 350px;
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
 }
@@ -165,18 +170,19 @@ section:nth-child(2) {
     height: 80%;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.2);
 }
-.chambre-thing div {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
+.info-small {
     height: 20%;
+    padding: 10px;
 }
-.chambre-thing div div {
+.contain-info-small {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding-top: 5px;
 }
-.chambre-thing div div h4 {
+.contain-info-small h4 {
     padding: 0;
 }
