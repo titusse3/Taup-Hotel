@@ -5,6 +5,7 @@ a {
 footer{
     width: 100%;
     height: 40vh;
+    min-height: 292.2px;
     background-color: #082D41;
     display: flex;
     justify-content: center;
@@ -52,4 +53,48 @@ footer nav {
 nav div {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (orientation: portrait) {
+    footer {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 36vh;
+        width: 100%;
+    }
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+        width: 100%;
+        align-items: center;
+        padding-top: 5%;
+        height: 90%;
+    }
+    footer nav, footer h2, footer .site-logo {
+        position: relative;
+    }
+    footer > div > div {
+        margin: 0;
+    }
+    footer .site-logo {
+        font-size: 2.5em;
+    }
+    footer .site-logo img {
+        width: inherit;
+        height: 9vh;/*3.2%*/
+    }
+    footer div nav {
+        height: 96.8%;
+        top: 0;
+        right: 0;
+        font-size: 2.8em;
+    }
+    footer h2 {
+        height: 10%;
+        font-size: 2.5em;
+        border-width: 6px;
+        vertical-align: middle;
+    }
 }

@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./src/css/index.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="header.js"></script>
-    <script defer src="carousel.js"></script>
+    <script defer src="./src/script/header.js"></script>
+    <script defer src="./src/script/carousel.js"></script>
 </head>
 
 <body>
     <?php 
-        include_once 'header.php';
+        include_once './src/.header.php';
         header_show();
     ?>
     <main>
@@ -72,7 +72,7 @@
         </section>
     </main>
     <?php
-        include_once 'footer.php';
+        include_once './src/.footer.php';
     ?>
 </body>
 

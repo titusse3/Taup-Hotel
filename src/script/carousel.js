@@ -1,8 +1,8 @@
 const childs = $('.carouselle > div').children();
 const links = [
-    "url('./image/template1.jpg')",
-    "url('./image/temp2.jpg')",
-    "url('./image/temp3.jpg')",
+    "url('./src/img/template1.jpg')",
+    "url('./src/img/temp2.jpg')",
+    "url('./src/img/temp3.jpg')",
 ]
 let k = 0;
 

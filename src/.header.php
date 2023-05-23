@@ -8,13 +8,13 @@
     function header_show($search=false, $isConnect=false, $dSup=false, $dSin=false) {
         echo '<header class="h-off">
                 <a class="site-logo" href="home.php">
-                    <img src="image/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
+                    <img src="src/img/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
                     <h1>Taup\'Hotel</h1>
                 </a>';
         if (!$search) {
             echo '<a id="recherche-button" href="recherche.php">
                     Recherche
-                    <img src="image/search.svg" alt="Loupe de recherche" />
+                    <img src="src/img/search.svg" alt="Loupe de recherche" />
                  </a>';
         }
         if (!$isConnect) {

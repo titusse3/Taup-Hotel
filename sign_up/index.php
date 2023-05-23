@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/sign.css" />
+    <link rel="stylesheet" href="../src/css/sign.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <?php 
-        include_once 'header.php';
+        include_once '../src/.header.php';
         header_show(false, false, false, true);
     ?>
     <main>
@@ -24,7 +24,7 @@
         </section>
     </main>
     <?php
-        include 'footer.php';
+        include './src/.footer.php';
     ?>
 </body>
 
