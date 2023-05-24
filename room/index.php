@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/hotel.css" />
-    <link rel="stylesheet" href="./css/article.css" />
-    <link rel="stylesheet" href="./css/reservation.css" />
+    <link rel="stylesheet" href="../src/css/hotel.css" />
+    <link rel="stylesheet" href="../src/css/article.css" />
+    <link rel="stylesheet" href="../src/css/reservation.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <?php 
-        include_once 'header.php';
-        header_show();
+        include_once '../src/.header.php';
+        header_show('../');
     ?>
     <main>
         <section class="top-section">
@@ -21,15 +21,15 @@
                 <h2>Le bourquer</h2>
                 <div class="info-1">
                     <div class="localisation">
-                        <img src="image/location.svg"/>
+                        <img src="../src/img/location.svg"/>
                         <h4>Rouen, Normandie, 15 rue du proute</h4>
                     </div>
                     <div class="notation">
-                        <img src="image/heart.svg"/>
-                        <img src="image/heart.svg"/>
-                        <img src="image/heart.svg"/>
-                        <img src="image/heart.svg"/>
-                        <img src="image/heart.svg"/>
+                        <img src="../src/img/heart.svg"/>
+                        <img src="../src/img/heart.svg"/>
+                        <img src="../src/img/heart.svg"/>
+                        <img src="../src/img/heart.svg"/>
+                        <img src="../src/img/heart.svg"/>
                         <h4>4.9</h4>
                     </div>
                 </div>
@@ -37,12 +37,12 @@
             <div class="photo-hotel">
                 <div class="title">
                     <div class="banque-img">
-                        <img id="img1" src="image/img-h/1.jpg"/>
+                        <img id="img1" src="../src/img/img-h/1.jpg"/>
                         <div class="grid-img">
-                            <img src="image/img-h/2.jpg"/>
-                            <img src="image/img-h/3.jpg"/>
-                            <img src="image/img-h/4.jpg"/>
-                            <img src="image/img-h/5.jpg"/>
+                            <img src="../src/img/img-h/2.jpg"/>
+                            <img src="../src/img/img-h/3.jpg"/>
+                            <img src="../src/img/img-h/4.jpg"/>
+                            <img src="../src/img/img-h/5.jpg"/>
                          </div>
                     </div>
                 </div>
@@ -88,6 +88,7 @@
         <h6>je sais pas y aune erreur</h6>
     </main>
     <?php
-        include_once 'footer.php';
+        include_once '../src/.footer.php';
+        footer_show('../')
     ?>
 </body>

@@ -13,7 +13,7 @@
 <body>
     <?php 
         include_once './src/.header.php';
-        header_show();
+        header_show('./');
     ?>
     <main>
         <section class="carouselle">
@@ -73,6 +73,7 @@
     </main>
     <?php
         include_once './src/.footer.php';
+        footer_show('./')
     ?>
 </body>
 

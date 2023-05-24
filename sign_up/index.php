@@ -11,7 +11,7 @@
 <body>
     <?php 
         include_once '../src/.header.php';
-        header_show(false, false, false, true);
+        header_show('../', false, false, false, true);
     ?>
     <main>
         <section>
@@ -24,7 +24,8 @@
         </section>
     </main>
     <?php
-        include './src/.footer.php';
+        include '../src/.footer.php';
+        footer_show('../');
     ?>
 </body>
 

@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Taup Hotel</title>
-    <link rel="stylesheet" href="./css/recherche.css" />
-    <link rel="stylesheet" href="./css/article.css" />
+    <link rel="stylesheet" href="../src/css/recherche.css" />
+    <link rel="stylesheet" href="../src/css/article.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="seartch.js" defer></script>
+    <script src="../src/script/seartch.js" defer></script>
 </head>
 
 <body>
     <?php 
-        include_once 'header.php';
-        header_show(true);
+        include_once '../src/.header.php';
+        header_show('../', true);
     ?>
     <main>
         <section class="search-barre-section">
@@ -64,7 +64,7 @@
                 <?php
                     for ($i = 0; $i < 7; ++$i) {
                         for ($y = 0; $y < 2; ++$y) {
-                            include "article.php";
+                            include "../src/.article.php";
                         }
                     }
                 ?>
@@ -72,6 +72,7 @@
         </section>
     </main>
     <?php
-        include_once 'footer.php';
+        include_once '../src/.footer.php';
+        footer_show('../');
     ?>
 </body>
