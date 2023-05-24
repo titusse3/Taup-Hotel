@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../src/css/article.css" />
     <link rel="stylesheet" href="../src/css/reservation.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../src/script/preview.js" defer></script>
 </head>
 
 <body>
@@ -38,13 +39,49 @@
             <div class="photo-hotel">
                 <div class="title">
                     <div class="banque-img">
-                    <!-- src="../src/img/img-h/1.jpg" -->
-                        <input id="img1" class="input-add" type="file"/>
+                        <div id="img1" class="input-add">
+                            <input id="img1-input" type="file"/>
+                            <img id="preview1" src="#" alt="Première image de la chambre" />
+                            <div class="bck-img"></div>
+                            <img id="camara" src="../src/img/camera.svg" alt="Icone d'un appareille photo"/>
+                        </div>
                         <div class="grid-img">
-                            <input type="file" class="img-grid input-add" />
-                            <input type="file" class="img-grid input-add" />
-                            <input type="file" class="img-grid input-add" />
-                            <input type="file" class="img-grid input-add" />
+                            <div class="img-grid input-add">
+                                <input id="img2-input"  type="file"/>
+                                <img id="preview2" src="#"  alt="Dexième image de la chambre"/>
+                                <div class="bck-img"></div>
+                                <div class="icon-img">
+                                    <img src="../src/img/camera.svg" alt="Icone d'un appareille photo"/>
+                                    <input type="image" src="../src/img/croix.svg" alt="Icone d'une croix"/>
+                                </div>
+                            </div>
+                            <div class="img-grid input-add">
+                                <input id="img3-input"  type="file"/>
+                                <img id="preview3" src="#" alt="Triosième image de la chambre"/>
+                                <div class="bck-img"></div>
+                                <div class="icon-img">
+                                    <img src="../src/img/camera.svg" alt="Icone d'un appareille photo"/>
+                                    <input type="image" src="../src/img/croix.svg" alt="Icone d'une croix"/>
+                                </div>
+                            </div>
+                            <div class="img-grid input-add">
+                                <input id="img4-input"  type="file"/>
+                                <img id="preview4" src="#" alt="Quatrième image de la chambre"/>
+                                <div class="bck-img"></div>
+                                <div class="icon-img">
+                                    <img src="../src/img/camera.svg" alt="Icone d'un appareille photo"/>
+                                    <input type="image" src="../src/img/croix.svg" alt="Icone d'une croix"/>
+                                </div>
+                            </div>
+                            <div class="img-grid input-add">
+                                <input id="img5-input"  type="file"/>
+                                <img id="preview5" src="#" alt="Cinqui-me image de la chambre"/>
+                                <div class="bck-img"></div>
+                                <div class="icon-img">
+                                    <img src="../src/img/camera.svg" alt="Icone d'un appareille photo"/>
+                                    <input type="image" src="../src/img/croix.svg" alt="Icone d'une croix"/>
+                                </div>
+                            </div>
                          </div>
                     </div>
                 </div>
@@ -63,10 +100,26 @@
                 </select>
             </div>
         </section>
-        <section id="room-reservation" class="validation">
-            <input value="quit" type="submit" id="quit"/>
-            <input value="delete" type="submit" id="delete"/>
-            <input value="valide" type="submit" id="valid"/>
+        <section id="room-reservation">
+            <?php 
+                $hotel = false;
+                if ($hotel) {
+                    echo '<input value="quit" type="submit" id="quit"/>
+                          <input value="delete" type="submit" id="delete"/>
+                          <input value="valide" type="submit" id="valid"/>';
+                } else {
+                    echo '<div class="room-one-night">
+                            <input class="input-add" placeholder="Prix"/>
+                            <h4>$</h4>
+                            <h5>/night</h5>
+                        </div>
+                        <div class="input-valid-contain">
+                            <input value="quit" type="submit" id="quit"/>
+                            <input value="delete" type="submit" id="delete"/>
+                            <input value="valide" type="submit" id="valid"/>
+                        <div>';
+                }
+            ?>
         </section>
         <h6>je sais pas y aune erreur</h6>
     </main>
