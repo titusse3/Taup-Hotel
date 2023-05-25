@@ -22,13 +22,13 @@
             if ($dSup) {
                 echo '<a class="disable-sign">';
             } else {
-                echo '<a href="sign_in">';
+                echo '<a href="/Taup-Hotel/sign_in">';
             }
             echo 'Sign in</a>';
             if ($dSin) {
                 echo '<a class="disable-sign">';
             } else {
-                echo '<a href="sign_up">';
+                echo '<a href="/Taup-Hotel/sign_up">';
             }
             echo 'Sign up</a>';
             echo '</div>';

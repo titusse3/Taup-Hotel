@@ -57,6 +57,10 @@
                 <h3>Hotel</h3>
                 <p class="info-desc">Le quartier a nasdas</p>
             </div>
+            <div class="owner">
+                <h3>Lit restant</h3>
+                <p class="info-desc">4</p>
+            </div>
         </section>
         <section id="room-reservation">
             <div class="room-one-night">

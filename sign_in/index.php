@@ -20,6 +20,7 @@
                 <input placeholder="Nom" name="name" required/>
                 <input placeholder="Prenom" name="firstname" required/>
                 <input placeholder="Email" name="email" required/>
+                <input placeholder="Numéro" name="phone" required type="phone"/>
                 <input placeholder="Mot de passe" name="password" required/>
                 <input placeholder="Confirmation mot de passe" required/>
                 <div>

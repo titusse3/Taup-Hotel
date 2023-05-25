@@ -143,3 +143,9 @@ textarea {
     background-color: rgb(251, 105, 105);
     transition: .5s all;
 }
+.bed-input {
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin-left: 10px;
+    width: 30%;
+}

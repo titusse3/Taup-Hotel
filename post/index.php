@@ -99,6 +99,10 @@
                     <option>Le quartier a nasdas</option>
                 </select>
             </div>
+            <div class="owner">
+                <h3>Lit</h3>
+                <input class="input-add bed-input" type="number"/>
+            </div>
         </section>
         <section id="room-reservation">
             <?php 

@@ -19,13 +19,13 @@ header {
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-image: url('../img/bck-sg.jpg');
     background-size: cover;
 }
 section {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
