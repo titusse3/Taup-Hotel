@@ -60,7 +60,7 @@
                             <h8>Type</h8>
                             <input placeholder="Note" type="number"/>
                             <input type="submit"/>
-                            <img/>
+                            <img src="../src/img/croix.svg"/>
                         </div>';
                 }
                 $a = true;
