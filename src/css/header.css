@@ -39,6 +39,7 @@ header > div > a, header > a:not(.site-logo) {
 #recherche-button {
     position: relative;
     width: 12%;
+    font-family: sans-serif;
 }
 #recherche-button img {
     float: right;
@@ -73,10 +74,10 @@ header a:hover:not(#recherche-button, .site-logo) {
     position: absolute;
     right: 3%;
     align-items: center;
-    font-family: sans-serif;
 }
 .sig-iu a {
     width: 80px;
+    font-family: sans-serif;
 }
 
 @media screen and (orientation: portrait) {
