@@ -1,3 +1,15 @@
+if (localStorage.getItem('token')) {
+    $('.sig-iu').remove();
+}
+
+$(window).on('scroll', () => {
+    if ($(window).scrollTop() != 0) {
+        $('header').addClass('h-on');
+    } else {
+        $('header').removeClass('h-on');
+    }
+});
+
 const childs = $('.carouselle > div').children();
 const links = [
     "url('./src/img/template1.jpg')",

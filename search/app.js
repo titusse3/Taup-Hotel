@@ -1,3 +1,7 @@
+if (localStorage.getItem('token')) {
+    $('.sig-iu').remove();
+}
+
 $("#room-button").on("change", ()=> {
     if ($("#room-button").val() == 'Chambre') {
         $("#type-room-button").css('visibility', 'visible');

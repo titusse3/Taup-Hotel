@@ -1,10 +1,4 @@
 <?php 
-    /**
-     * @param boolean $search Boolean qui dit si le search est disable
-     * @param boolean $isConnect Boolean qui dit si le user est connecté
-     * @param boolean $dSup Boolean qui dit si sign up est disable
-     * @param boolean $dSin Boolean qui dit si sign in est disable
-     */
     function footer_show($path) {   
         echo '<footer>
                 <div>
@@ -17,7 +11,7 @@
                             <a href="/Taup-Hotel/">Home</a>
                         </div>
                         <div>
-                            <a href="/Taup-Hotel/recherche">Search</a>
+                            <a href="/Taup-Hotel/search">Search</a>
                             <a>Post</a>
                         </div>
                         <div>
