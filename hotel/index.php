@@ -91,9 +91,10 @@
                     </select>
                 </div>
                 <?php
+                    include_once "../src/.article.php";
                     for ($i = 0; $i < 7; ++$i) {
                         for ($y = 0; $y < 2; ++$y) {
-                            include "../src/.article.php";
+                            article_show();
                         }
                     }
                 ?>
