@@ -205,6 +205,10 @@ main > h4 {
     border: 1px solid #949494;
     padding: 9px;
 }
+.note-contain {
+    justify-content: space-evenly;
+    min-height: 70px;
+}
 .note-contain .annouche-info{
     display: flex;
     flex-direction: row;
@@ -212,12 +216,22 @@ main > h4 {
     font-size: 1.5em;
     width: 40%;
 }
-.note-contain h8 {
+.note-contain select {
     font-size: 1.2em;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #f2f0f0;
 }
 .note-contain input[type="submit"] {
     height: 70%;
-    width: 20%;
+    width: 15%;
+    border: none;
+    cursor: pointer;
+    background-color: #1D64EC;
+    color: white;
 }
 .note-contain img {
     filter: invert(1);

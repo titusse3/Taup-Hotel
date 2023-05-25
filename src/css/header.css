@@ -73,6 +73,7 @@ header a:hover:not(#recherche-button, .site-logo) {
     position: absolute;
     right: 3%;
     align-items: center;
+    font-family: sans-serif;
 }
 .sig-iu a {
     width: 80px;

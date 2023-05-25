@@ -57,9 +57,13 @@
                                 <h7>Mabapper</h7>
                                 <h7>Kyllyan</h7>
                             </div>
-                            <h8>Type</h8>
-                            <input placeholder="Note" type="number"/>
-                            <input type="submit"/>
+                            <select>
+                                <option>Client</option>
+                                <option>Owner</option>
+                                <option>Amine</option>
+                            </select>
+                            <input placeholder="Perme" type="number"/>
+                            <input type="submit" value="Grante"/>
                             <img src="../src/img/croix.svg"/>
                         </div>';
                 }
@@ -75,7 +79,7 @@
                     echo '<h5>User</h5>';
                     echo '<input id="input-user" placeholder="Utilisateur"/>';
                     echo '<div class="give-note">';
-                        for ($i=0; $i < 7; $i++) { 
+                        for ($i=0; $i < 10; $i++) { 
                             user_show();
                         }
                     echo '</div>';
