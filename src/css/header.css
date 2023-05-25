@@ -11,7 +11,6 @@ header {
     backdrop-filter: blur(8px);
     background-color: rgba(8, 6, 6, 0.2);
     z-index: 100;
-    font-family: sans-serif;
 }
 /* style de l'animation d'apparition du header */
 .h-on {
@@ -38,7 +37,6 @@ header > div > a, header > a:not(.site-logo) {
 #recherche-button {
     position: relative;
     width: 12%;
-    font-family: sans-serif;
 }
 #recherche-button img {
     float: right;
