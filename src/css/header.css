@@ -33,7 +33,6 @@ header > div > a, header > a:not(.site-logo) {
     padding : 10px;
     margin: 20px;
     text-align: center;
-    font-family: sans-serif;
     font-weight: normal;
 }
 #recherche-button {
@@ -77,8 +76,6 @@ header a:hover:not(#recherche-button, .site-logo) {
 }
 .sig-iu a {
     width: 80px;
-    font-family: sans-serif;
-    font-family: sans-serif;
 }
 
 @media screen and (orientation: portrait) {
