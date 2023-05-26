@@ -1,8 +1,18 @@
 <?php
     header('Content-Type: application/json');
     header('Access-Control-Allow-Origin: *');
+<<<<<<< HEAD
     header('Access-Control-Allow-Methods: POST');
     if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+=======
+<<<<<<< HEAD
+    header('Access-Control-Allow-Methods: POST');
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+=======
+    header('Access-Control-Allow-Methods: GET');
+    if ($_SERVER['REQUEST_METHOD'] != 'GET') {
+>>>>>>> main
+>>>>>>> main
         http_response_code(403);
         die('Forbidden');
     }

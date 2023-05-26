@@ -21,7 +21,15 @@
             <h1>Taup'Hotel</h1>
         </a>
         <a id="recherche-button" href="../search">
+<<<<<<< HEAD
             Research
+=======
+<<<<<<< HEAD
+            Research
+=======
+            Recherche
+>>>>>>> main
+>>>>>>> main
             <img src="../src/img/search.svg" alt="Loupe de recherche" />
         </a>
         <div class="sig-iu">
@@ -32,6 +40,10 @@
     <main>
         <section>
             <form>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
                 <h3>Register</h3>
                 <input placeholder="Name" name="name" pattern="^\S.{0,510}\S$" required />
                 <input placeholder="Firstname" name="firstname" pattern="^\S.{0,510}\S$" required />
@@ -40,6 +52,19 @@
                 <input placeholder="Password" name="password" type="password"
                     pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" required />
                 <input placeholder="Password confirmation" name="repassword" type="password"
+<<<<<<< HEAD
+=======
+=======
+                <h3>Insrivez vous</h3>
+                <input placeholder="Nom" name="name" pattern="^\S.{0,510}\S$" required />
+                <input placeholder="Prenom" name="firstname" pattern="^\S.{0,510}\S$" required />
+                <input placeholder="Email" name="email" type="email" required />
+                <input placeholder="Phone (+00 000000000)" name="phone" pattern="^\+[0-9]{2} [0-9]{9}$" required />
+                <input placeholder="Mot de passe" name="password" type="password"
+                    pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" required />
+                <input placeholder="Confirmation mot de passe" name="repassword" type="password"
+>>>>>>> main
+>>>>>>> main
                     pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" required />
                 <input type="submit" value="Connection" />
             </form>
