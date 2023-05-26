@@ -67,7 +67,7 @@
                             <img src="../src/img/croix.svg"/>
                         </div>';
                 }
-                $a = true;
+                $a = false;
                 if (!$a) {
                     echo '<h5>Mes ancienne réservation</h5>
                           <div class="give-note">';
@@ -87,9 +87,25 @@
                 ?>
             </div>
         </div>
+        <h4 class="other-sec">Session</h4>
+        <div class="contain session-cc">
+            <div class="personal-information-contain disco-contain">
+                <div class="button-id-disco">Disconnect<img src="../src/img/aurevoir.svg"/></div>
+            </div>
+            <div class="contain-past">
+                <h5>Mes ancienne réservation</h5>
+                <div class="give-note">
+                    <div class="annouce note-contain session-contain">
+                        <h7>Ceci est une ssession</h7>
+                        <h7>18/06/2030</h7>
+                        <img src="../src/img/croix.svg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php 
         $p = false;
-        $a = true;
+        $a = false;
         if ($p) {
             echo    '<h4 class="other-sec">Permission</h4>
                     <div class="perm-demande">

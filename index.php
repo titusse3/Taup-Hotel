@@ -19,9 +19,12 @@
             Recherche
             <img src="./src/img/search.svg" alt="Loupe de recherche" />
         </a>
-        <div class="sig-iu">
+        <!-- <div class="sig-iu">
             <a href="./signin">Sign in</a>
             <a href="./signin">Sign up</a>
+        </div> -->
+        <div class="sig-iu">
+            <a href="./account" class="button-connect"><img src="src/img/account.svg"/>Account</a>
         </div>
     </header>
     <main>
