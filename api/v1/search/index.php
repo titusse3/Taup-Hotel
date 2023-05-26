@@ -182,7 +182,7 @@
         $reqh = 'SELECT ID, NAME, (SELECT IFNULL(AVG(PRICE), 0) FROM ROOM WHERE 
             HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT IFNULL(AVG(NOTE), 2.50) FROM 
             NOTE WHERE R_ID IN (SELECT ID FROM ROOM WHERE HOTEL = HOTEL.ID)) 
-            AS NOTE, "HOTEL", ADDRESS, CITY, COUNTRY FROM HOTEL';
+            AS NOTE, "HOTEL" AS TYPE, ADDRESS, CITY, COUNTRY FROM HOTEL';
         if (count($hotel) > 0) {
             $reqh .= ' WHERE ';
             $reqh .= implode(' AND ', $hotel);
@@ -200,11 +200,12 @@
         $req = 'SELECT ID, NAME, (SELECT IFNULL(AVG(PRICE), 0) FROM ROOM WHERE 
             HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT IFNULL(AVG(NOTE), 2.50) FROM 
             NOTE WHERE R_ID IN (SELECT ID FROM ROOM WHERE HOTEL = HOTEL.ID)) 
-            AS NOTE, "HOTEL", ADDRESS, CITY, COUNTRY FROM HOTEL';
+            AS NOTE, "HOTEL" AS TYPE, ADDRESS, CITY, COUNTRY FROM HOTEL';
         if (count($hotel) > 0) {
             $req .= ' WHERE ';
             $req .= implode(' AND ', $hotel);
         }
+        unset($valid['dto'], $valid['dfrom'], $valid['place'], $valid['type_room']);
     }
     if (isset($valid['order'])) {
         if ($valid['order'] == 'DESC') {

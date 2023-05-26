@@ -48,41 +48,33 @@
         <section class="annonce">
             <div class="filter">
                 Sort by
-                <select id="trie-button">
+                <select name="trie" id="trie-button">
                     <option selected="selected" disabled>Price</option>
                     <option>Peu importe</option>
-                    <option>↑ (croissant)</option>
-                    <option>↓ (décroissant)</option>
+                    <option value="ASC">↑ (croissant)</option>
+                    <option value="DESC">↓ (décroissant)</option>
                 </select>
-                <select id="etoile-button">
+                <select name="note" id="etoile-button">
                     <option selected="selected" disabled>Notation</option>
                     <option>Peu importe</option>
-                    <option>★</option>
-                    <option>★★</option>
-                    <option>★★★</option>
-                    <option>★★★★</option>
-                    <option>★★★★★</option>
+                    <option value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
                 </select>
-                <select id="room-button">
+                <select name="type" id="room-button">
                     <option selected="selected" disabled>Type</option>
-                    <option>Hotel</option>
-                    <option>Chambre</option>
+                    <option value="HOTEL">Hotel</option>
+                    <option value="ROOM">Room</option>
                 </select>
-                <select id="type-room-button">
-                    <option selected="selected" disabled>Type de Chambre</option>
-                    <option>Dortoire</option>
-                    <option>Chambre seule</option>
+                <select name="type_room" id="type-room-button">
+                    <option selected="selected" disabled>Type of Room</option>
+                    <option value="DORTORY">Dortory</option>
+                    <option value="SOLO">Private Room</option>
                 </select>
             </div>
             <div class="contain-annonce">
-                <?php
-                    include_once "../src/.article.php";
-                    for ($i = 0; $i < 7; ++$i) {
-                        for ($y = 0; $y < 2; ++$y) {
-                            article_show();
-                        }
-                    }
-                ?>
             </div>
         </section>
     </main>

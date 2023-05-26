@@ -1,5 +1,13 @@
 if (localStorage.getItem('token')) {
-    $('.sig-iu').remove();
+    $('.sig-iu').children().remove();
+    const img = $('<img>',  {src : 'src/img/account.svg'});
+    const a = $('<a>', {
+        href: './account',
+        class: 'button-connect',
+        text: 'Account'
+    })
+    $('.sig-iu').append(a);
+    a.append(img);
 }
 
 $(window).on('scroll', () => {
