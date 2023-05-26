@@ -6,15 +6,24 @@
     <title>Taup Hotel</title>
     <link rel="stylesheet" href="./src/css/index.css" />
     <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="./src/script/header.js"></script>
-    <script defer src="./src/script/carousel.js"></script>
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-    <?php 
-        include_once './src/.header.php';
-        header_show('./');
-    ?>
+    <header class="h-off">
+        <a class="site-logo" href="./">
+            <img src="./src/img/taup.png" alt="Logo du site taupe-hotel" width="75px" height="75px" />
+            <h1>Taup'Hotel</h1>
+        </a>
+        <a id="recherche-button" href="./search">
+            Recherche
+            <img src="./src/img/search.svg" alt="Loupe de recherche" />
+        </a>
+        <div class="sig-iu">
+            <a href="./signin">Sign in</a>
+            <a href="./signin">Sign up</a>
+        </div>
+    </header>
     <main>
         <section class="carouselle">
             <div>
