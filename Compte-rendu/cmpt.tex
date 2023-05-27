@@ -69,11 +69,15 @@
     leurs mises en forme à l'aide des fichiers css. Il s'agit d'ailleur de la 
     première chose que nous avons produit pour ce site.
 
+    \vphantom{}
+
     Pour la réalisation de ces pages, nous avons tous d'abord réaliser des 
     maquettes nous permettant de mettre en formes toutes ces pages. Après cela 
     nous avons donc réalisé les élement les plus récurrents du site. La 
     production du haut de page ('header') et du bas de page (`footer') a donc 
     été l'étape suivante de cette production. 
+
+    \vphantom{}
 
     Le `header' contient la redirection vers la page de recherche. En effet, 
     nous avons fait le choix de créer une page aillant pour bute la recherche 
@@ -81,12 +85,14 @@
     d'acceuile. Au contraire, nous avons créé une page d'acceuille présantant 
     le site à l'aide d'avis fictife. 
 
+    \vphantom{}
+
     La partie la plus intéréssante de cette page d'acceuille concerne la 
-    carousel. Celui-ci a été réalisé à l'aide d'un script js récupérant des 
-    images de taille adéquoite à l'affiche du carousel. Un simple jeu sur des 
-    modulos et l'utilisation de la fonction \textbf{setInterval} (fonction qui 
-    permet de répéter l'appelle à une procédure spécifier dans un interval 
-    donner) permet sa production. 
+    carousel. Un simple jeu sur des modulos et l'utilisation de la fonction 
+    \textbf{setInterval} (fonction qui permet de répéter l'appelle à une 
+    procédure spécifier dans un interval donner) permet sa production. 
+
+    \vphantom{}
 
     Le `header' donne aussi accés au page de connection et d'inscription (dans 
     le cas où l'utilisateur n'est pas connecter). Ces deux pages on recourt au 
@@ -97,6 +103,8 @@
     ce qui concerne cette page, le fond étant une image (libre bien évidement) 
     en résolution 4k, on peut alors observer un fond blanc le temps de 
     chargement de cette image.
+
+    \vphantom{}
     
     Dans le cas où l'utilisateur est connecté, le `header' donne accés à la page 
     de compte. Cette page à plusieur version en fonction du type d'utilisateur 
@@ -113,6 +121,8 @@
     aussi accès au divers `sessions' du compte, point qui sera dévelloper plus 
     profondément dans la partie sur le `back-end'.
 
+    \vphantom{}
+
     En ce qui concerne le `footer', celui-ci donne accès à la page `post', qui 
     permet d'ajouter une annonce. En ce qui concerne ce procésusse d'ajout 
     d'annonce, nous avons décidé de rendre possible une telle action seulement
@@ -122,6 +132,8 @@
     permetterai de limité le nombre d'annonces à administrer pour les 
     administrateurs du site.
     
+    \vphantom{}
+    
     En ce qui concerne cette page (la page d'ajout d'annonce), la partie la plus 
     intéréssante réside dans la production d'une prévisualisation d'image que 
     l'utilisateur rentrer pour cette annonce. Une telle fonctionnaliter permet 
@@ -130,11 +142,113 @@
     une simple script js permet ce rendu. De plus, pour cette page, on note la 
     ressemblance avec la page des annonces et/ou hotel. 
 
+    \vphantom{}
+
     Pour finir on peut évoquer le mode de fonctionnement d'ajout des annonces. 
     Une annonce et soit un hotel, soit une chambre. Un hotel peut contenir 
     plusieur chambre et une chambre doit provenir d'un hotel. Enfin l'ajout 
     d'une chambre à une hotel se fait lors de la création de la chambre. 
     En effet, lors de cette création, l'utilisateur se voit forcer de lier la 
-    chambre qu'il vient de créer à un hotel. 
+    chambre qu'il vient de créer à un hotel.
+
+    \vphantom{}
+    
+    Pour conclure cette section sur le `front-end' le choix que nous avons fait 
+    de séparer le `front du back' nous a permis une implémentation plus rapide 
+    de toutes ces pages php et de leurs styles. Les avantages pour le `back' 
+    sont traité dans la deuxième section de ce compte rendu. 
+
+    \newpage
+
+    \section{Back-end}
+
+    Dans cette partie seront évoquer la justification et production de l'API de 
+    notre site, mais aussi des liens permettant de lier le `back au front'.
+
+    \subsection{Justification du choix de production d'une API.}
+
+    Le choix de la production d'une API, premièrement permet une séparation 
+    concrète entre le coter serveur et celui client. On comprend donc qui 
+    exécute quoi. Secondement, un autre `front' pourrait être simplement 
+    implémenté. Il ne resterait alors qu'à reproduire les requêtes API semblables. 
+    On peut aussi envisager la possibiliter de créer une application mobile ou 
+    encore un appilication desktop. 
+    Nous allons donc poursuivre cette section par une présentation des 
+    fonctionnaliter de cette API.
+
+    \subsection{Gestion globale de l'API.}
+
+    Les requêtes faites à l'API sont toutes dans notre cas fait à l'aide de 
+    jquery de la commande \textbf{post}. Toutes requêtes sont traitées par l'API 
+    avec un module que nous avons élaboré \textbf{ratelimite}. Ce module permet 
+    de s'assurer qu'aucun utilisateur n'est malicieux, c'est-à-dire qu'il ne 
+    `spam' pas notre API. Dans le cas de requêtes trop nombreuses pour un 
+    utilisateur, celui ce vois bloquer l'accer aux requêtes pour une durée de 
+    5minute, valeur choisir arbitrairement.
+
+    \subsection{Gestion de compte}
+
+    La gestion des comptes prévue par notre API peut être vue comme très poussé. 
+    En effet, nous avons l'inscription et la connextion avec pour tous les 
+    champs concernnet, une vérification de la vérasiter de ces champs, une 
+    gestion des mots de passe en chiffré à l'aide de la fonction de hachage 
+    \textbf{sha512}. Mais nous avons surtout la gestion de session de compte. À 
+    la manière de grand réseaux sociaux comme tiktok ou même de moteur de 
+    recherche comme Google, notre site implémente cette fonctionnaliter. 
+    Celle-ci corresponds à la création d'une session à chaque nouvelle connexion.
+    Une nouvelle connection est définie comme étant les donners d'une session 
+    n'existant pas encore. Le principe de ces sessions permet une grande 
+    amélioration de la sécuriter des comptes.
+
+    \subsection{La transmition de donner}
+
+    Comme evoquer plus tôt, la plupart de nos pages, éffféctue des requêtes pour 
+    accéder au donné qu'il les intéresse. Mais ce mode de fonction ne permet 
+    pas la gestion de page comme celle de reservation de chambre. C'est pour 
+    cela que nous sommes passé par la fonction \textbf{urlParams}.
+
+    \subsection{La gestion des images d'annonce}
+
+    Les hotels et chambres étant obligatoirement représenté par une image, il 
+    nous a donc fallu trouver une méthode pour cette sauvegarde. Nous avons 
+    donc décidé d'utiliser l'API de imgure (site de partage de photo) pour la 
+    gestion de ces images. Cela permet de réduire l'espace néssécaire au serveur 
+    pour la gestion de ce site web en cas de déploiment. Cela pourrait aussi 
+    permettre à des utilisateurs de imgure d'être améner à réserver une chambre 
+    après l'avoir consulté sur le site. 
+
+    \subsection{Le scroll `infinie' de la page de recherche}
+
+    La page de recherche d'annonce pouvant contenir des dixaines de milier 
+    d'annonce, une simple requêtes récupérent toutes ces annonces pourrait être 
+    très longues à recevoir et même à traiter. C'est pour cela que nous avons 
+    mis en place un scroll qui une fois arrivé au nombre d'annonces actuellement 
+    affiché re-éfféctue des requêtes et donc affiche ces nouvelles annonces. Le 
+    `ratelimite' de maximal de telles requêtes revient donc à une recherche
+    maximale d'envireons 1200 annonce toutes les 5 minutes, ce qui est plutôt r
+    raisonble selon nous. 
+
+    \newpage
+
+    \section{Conclusion}
+
+    Pour conclure, ce projet étant asser ouvert, nous avons donc pu inonver par 
+    rapport au projet que nous avions produit l'anné dernière notament avec la 
+    production d'une API, ou encore le stockage des images sur imgure. En ce qui 
+    concercerne les difficultés recontrès, premièrement la production de ce 
+    compte rendu. N'aillant pas d'exepérience dans ce domaine, nous ne savions 
+    pas de quoi parler ni même comment. Secondement, le temps, nous à fait 
+    defaut, plusieur fonctionnaliter et même pages n'ont pas pu être produite 
+    à cause de manque de temps. On peut notament citer l'idée de rendre le site 
+    responsive (c'est-à-dire, produire des versions du `front' en redimentionant 
+    certaine partie du site pour le rendre plus accésible sur des appareils
+    comme les téléphones). Il s'agit de la plus du plus grand inconvéniant de ce 
+    site, en effet, si l'utilisateur n'a pas une résolution générique de 
+    dimension 16:9 alors une perte de silibiliter peut apparaitre, cela rend 
+    même le site dans certain cas ilisible.   
+
+    \section{Remerciment}
+
+    Louis Dumontier, pour nous avoir produit la taupe qui nous sert de logo.
     
 \end{document}

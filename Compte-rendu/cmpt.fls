@@ -938,9 +938,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 OUTPUT cmpt.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT cmpt.aux
 INPUT ./cmpt.out
 INPUT ./cmpt.out
+INPUT /home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
 INPUT /home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
 INPUT /home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
