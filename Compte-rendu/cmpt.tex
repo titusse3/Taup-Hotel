@@ -99,6 +99,42 @@
     chargement de cette image.
     
     Dans le cas où l'utilisateur est connecté, le `header' donne accés à la page 
-    de compte. 
+    de compte. Cette page à plusieur version en fonction du type d'utilisateur 
+    qui accède à cette page. Dans le cas d'un utilisateur basique, il a la 
+    possibiliter de changer les informations de son compte, mais aussi de noter 
+    les chambres et dortoire que l'utilisateur à déjà visiter. Pour un 
+    propirétaire de chambre, il a accès à la modifictions des informations de 
+    ces annonces, mais aussi à leurs supprésion. Enfin pour un administrateur,
+    l'accès à la supprésion d'annonce et d'utilisateur est donné dans cette 
+    page. On notera par contre, l'imposibiliter pour un administrateur de 
+    réserver, de détenire des chambres. Une telle condition peut être justifiée
+    par une limitation pour les administrateurs à influencer les choix des 
+    utilisateurs vers des chambres qu'il détiendrait. Enfin cette page donne 
+    aussi accès au divers `sessions' du compte, point qui sera dévelloper plus 
+    profondément dans la partie sur le `back-end'.
+
+    En ce qui concerne le `footer', celui-ci donne accès à la page `post', qui 
+    permet d'ajouter une annonce. En ce qui concerne ce procésusse d'ajout 
+    d'annonce, nous avons décidé de rendre possible une telle action seulement
+    pour les personnes aillants reçu le grade adéquoite. Grade qui est 
+    demandable à un administrateur à l'aide de la page de compte. Cette 
+    contrainte sur l'utilisateur pour l'ajout d'annonce (de chambre ou d'hotel) 
+    permetterai de limité le nombre d'annonces à administrer pour les 
+    administrateurs du site.
+    
+    En ce qui concerne cette page (la page d'ajout d'annonce), la partie la plus 
+    intéréssante réside dans la production d'une prévisualisation d'image que 
+    l'utilisateur rentrer pour cette annonce. Une telle fonctionnaliter permet 
+    pour l'utilisateur de ne pas envoyer de photo possibilement comprométente à 
+    notre serveur. En ce qui concerne l'implémentation de cette fonctionnaliter, 
+    une simple script js permet ce rendu. De plus, pour cette page, on note la 
+    ressemblance avec la page des annonces et/ou hotel. 
+
+    Pour finir on peut évoquer le mode de fonctionnement d'ajout des annonces. 
+    Une annonce et soit un hotel, soit une chambre. Un hotel peut contenir 
+    plusieur chambre et une chambre doit provenir d'un hotel. Enfin l'ajout 
+    d'une chambre à une hotel se fait lors de la création de la chambre. 
+    En effet, lors de cette création, l'utilisateur se voit forcer de lier la 
+    chambre qu'il vient de créer à un hotel. 
     
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.7)  27 MAY 2023 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.7)  27 MAY 2023 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -599,23 +599,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `cmpt.toc'.
 
- [2] [3] (./cmpt.aux)
+ [2] [3] [4] (./cmpt.aux)
 Package rerunfilecheck Info: File `cmpt.out' has not changed.
 (rerunfilecheck)             Checksum: 757A45E1AEC099F224F0C3BA8646333E;106.
  ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 480145
- 297415 string characters out of 5893301
- 628235 words of memory out of 5000000
+ 17550 strings out of 480145
+ 297421 string characters out of 5893301
+ 631235 words of memory out of 5000000
  35219 multiletter control sequences out of 15000+600000
  479085 words of font info for 48 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  94i,9n,117p,352b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
-Output written on cmpt.pdf (3 pages, 98846 bytes).
+Output written on cmpt.pdf (4 pages, 102571 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
