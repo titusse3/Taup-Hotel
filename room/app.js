@@ -27,7 +27,8 @@ function daysBetween(startDate, endDate) {
     return (endDate - startDate) / (24 * 60 * 60 * 1000);
 }
 
-const capitalize = str => str.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+const capitalize = str => str.split(' ').map(s => s.charAt(0).toUpperCase() 
+    + s.slice(1)).join(' ');
 
 $.post('../api/v1/room/get/', JSON.stringify({id: id_r}), d => {
     if (d.code !== 'good') {
