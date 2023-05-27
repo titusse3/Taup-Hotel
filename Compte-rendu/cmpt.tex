@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[letterpaper,margin=3cm]{geometry}
+\usepackage[export]{adjustbox}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{svg}
+\usepackage{tocloft}
+\usepackage{algorithmic}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{dirtree}
+
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand\thesubsection{\arabic{subsection}}
+
+\setlength{\cftsecnumwidth}{3em} 
+% ajuste la largeur de la colonne des numéros de section
+
+\setlength{\parindent}{1cm}
+\sloppy
+
+
+%--- begin document ------------------------------------------------------------
+
+\title{Projet de raisonnement propositionnel}
+\author{Edouard.H Théo.R.V}
+\date{2022--2023}
+
+\begin{document}
+    \begin{figure}
+        \includegraphics[scale=0.3, right]{logo-univ-rouen-normandie-noir.png}
+    \end{figure}
+
+    \maketitle
+
+    \begin{abstract}
+        Ce document constitue notre compte rendu du projet de web. Il traite 
+        de la production d'un site internet de réservation de chambre et de 
+        dortoir, conformément à l'énoncé de ce projet.
+        
+        Le site que nous avons donc produit se nomme \textbf{Taup'Hotel}
+        (Jeux de mots avec sa ressemblance avec \textbf{Top Hotel} qui signifie 
+        en anglais `le meilleur hôtel'). Nous avons décidé de séparer la 
+        production de celui-ci en deux parties. C'est pour cela que nous 
+        commenceront par une présentation du `front-end', puis du `back-end'. 
+        Pour finir, nous aborderons les difficultés liées à la production de ce 
+        projet et des diverses améliorations de ce site. 
+    \end{abstract}
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+
+    \section{Le front-end}
+
+    Qui par définition selon le site linkweb, correpond à `l'ensemble des 
+    éléments visibles et accessibles directement sur un site web'. Pour ce site, 
+    cela constitue la production de pages php créant diverse page internet et de
+    leurs mises en forme à l'aide des fichiers css. Il s'agit d'ailleur de la 
+    première chose que nous avons produit pour ce site.
+
+    Pour la réalisation de ces pages, nous avons tous d'abord réaliser des 
+    maquettes nous permettant de mettre en formes toutes ces pages. Après cela 
+    nous avons donc réalisé les élement les plus récurrents du site. La 
+    production du haut de page ('header') et du bas de page (`footer') a donc 
+    été l'étape suivante de cette production. 
+
+    Le `header' contient la redirection vers la page de recherche. En effet, 
+    nous avons fait le choix de créer une page aillant pour bute la recherche 
+    d'annonce. Contrairement à ce qui était demandé, de l'incorporer dans la page 
+    d'acceuile. Au contraire, nous avons créé une page d'acceuille présantant 
+    le site à l'aide d'avis fictife. 
+
+    La partie la plus intéréssante de cette page d'acceuille concerne la 
+    carousel. Celui-ci a été réalisé à l'aide d'un script js récupérant des 
+    images de taille adéquoite à l'affiche du carousel. Un simple jeu sur des 
+    modulos et l'utilisation de la fonction \textbf{setInterval} (fonction qui 
+    permet de répéter l'appelle à une procédure spécifier dans un interval 
+    donner) permet sa production. 
+
+    Le `header' donne aussi accés au page de connection et d'inscription (dans 
+    le cas où l'utilisateur n'est pas connecter). Ces deux pages on recourt au 
+    même fichier de style css. Une spécificiter intéréssante de ces pages 
+    concerne l'annimation css qui se déclanche en cas d'erreur sur un des champs 
+    du formulaire. Celle-ci à recours au `keyframe' élement presque obligatoire 
+    à la production d'animation en css. Nous avons aussi eu de petit problème en 
+    ce qui concerne cette page, le fond étant une image (libre bien évidement) 
+    en résolution 4k, on peut alors observer un fond blanc le temps de 
+    chargement de cette image.
+    
+    Dans le cas où l'utilisateur est connecté, le `header' donne accés à la page 
+    de compte. 
+    
+\end{document}

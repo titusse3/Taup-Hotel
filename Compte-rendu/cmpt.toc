@@ -1,0 +1,2 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {I}Le front-end}{3}{section.1}%
