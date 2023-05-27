@@ -29,10 +29,8 @@
 .heart-block, .type-block {
     position: absolute;
     top: 2%;
-
     display: flex;
     align-items: center;
-    gap: 10%;
     backdrop-filter: blur(2px);
     background-color: rgba(149, 149, 149, 0.5);
     border-radius: 5px;
@@ -51,7 +49,7 @@
     right: 2%;
 }
 .heart-block h4, .type-block h4 {
-    margin: 0;
+    margin: 0 0 0 5px;
     color: #FFFFFF;
     font-family: sans-serif;
 }

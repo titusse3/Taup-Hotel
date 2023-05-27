@@ -202,3 +202,16 @@ main {
     height: fit-content;
     /* margin-top: 2%; */
 }
+
+input[type="submit"] {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    background-color: #1D64EC;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    padding: .25%;
+    width: 10%;
+    vertical-align: middle;
+    cursor: pointer;
+}
