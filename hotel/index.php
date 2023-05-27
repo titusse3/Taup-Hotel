@@ -73,7 +73,7 @@
                 <h3>Chambre</h3>
             </div>
             <div class="chambre-contain">
-                <div class="filter">
+                <form class="filter">
                     Trier par
                     <select id="trie-button">
                         <option selected="selected" disabled>Prix</option>
@@ -90,17 +90,13 @@
                         <option>★★★★</option>
                         <option>★★★★★</option>
                     </select>
-                    <select id="room-button">
-                        <option selected="selected" disabled>Etat</option>
-                        <option>Libre</option>
-                        <option>Réservé</option>
-                    </select>
                     <select>
                         <option selected="selected" disabled>Type de Chambre</option>
                         <option>Dortoire</option>
                         <option>Chambre seule</option>
                     </select>
-                </div>
+                    <input type="submit" value="Search" />
+                </form>
                 <?php
                     include_once "../src/.article.php";
                     for ($i = 0; $i < 7; ++$i) {
@@ -110,7 +106,6 @@
                     }
                 ?>
             </div>
-
         </section>
     </main>
     <?php

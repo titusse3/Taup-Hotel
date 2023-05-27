@@ -137,8 +137,14 @@ function fetch() {
         if (data.code == 'good') {
             if (data.data) {
                 addElement(...data.data);
-            } else if (!next) container.append($('<p>', {text: data.success[0]}));
-        } else if (!next) container.append($('<p>', {text: data.reason[0]}));
+            } else if (!next) container.append($('<p>', {
+                text: data.success[0],
+                class: 'erreur'
+            }));
+        } else if (!next) container.append($('<p>', {
+            text: data.reason[0],
+            class: 'erreur'
+        }));
         next = data.next || null;
     })
 }

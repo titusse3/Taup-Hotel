@@ -22,7 +22,7 @@
             case RateType::Post:
                 return 20;
             case RateType::Get:
-                return 20;
+                return 40;
             case RateType::Login:
                 return 10;
             case RateType::Modify:

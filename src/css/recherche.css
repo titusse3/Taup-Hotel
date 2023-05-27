@@ -167,3 +167,10 @@ input[type=number] {
     height: fit-content;
     margin-bottom: 3%;
 }
+
+.erreur {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 2%;
+    font-family: sans-serif;
+}
