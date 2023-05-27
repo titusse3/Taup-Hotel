@@ -2,7 +2,7 @@ if (localStorage.getItem('token')) {
     $('.sig-iu').children().remove();
     const img = $('<img>',  {src : '../src/img/account.svg'});
     const a = $('<a>', {
-        href: './account',
+        href: '../account',
         class: 'button-connect',
         text: 'Account'
     })
@@ -38,12 +38,13 @@ const type = $('select[name="type"]');
 const type_room = $('select[name="type_room"]');
 
 const currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 1);
 let year = currentDate.getFullYear();
 let month = String(currentDate.getMonth() + 1).padStart(2, '0');
 let day = String(currentDate.getDate()).padStart(2, '0');
 departure.val(year + '-' + month + '-' + day)
 
-currentDate.setDate(currentDate.getDate() + 7);
+currentDate.setDate(currentDate.getDate() + 8);
 year = currentDate.getFullYear();
 month = String(currentDate.getMonth() + 1).padStart(2, '0');
 day = String(currentDate.getDate()).padStart(2, '0');
@@ -59,8 +60,14 @@ function addElement() {
     for (let i = 0; i < arguments.length; ++i) {
         const a = $('<a>', {
             class: 'annonce-block',
-            href: '../' + (arguments[i]['TYPE'] == 'HOTEL' ? 'hotel' : 'room')
-                + '/?id=' + arguments[i]['ID']
+            href: '../' + (arguments[i]['TYPE'] == 'HOTEL' ? 
+                'hotel?id=' + arguments[i]['ID'] : 
+                'room?' + (new URLSearchParams({
+                    id: arguments[i]['ID'],
+                    place: bed.val(),
+                    departure: new Date(departure.val()).getTime(),
+                    arrived: new Date(arrived.val()).getTime()
+                })).toString())
         });
         const img_block = $('<div>', {class: 'img-block'});
         const img_annonce = $('<img>', {
@@ -112,8 +119,8 @@ function addElement() {
 
 function fetch() {
     let body = {
-        dfrom: new Date(departure.val()).getTime(),
-        dto: new Date(arrived.val()).getTime(),
+        dfrom: new Date(departure.val()).getTime() / 1000,
+        dto: new Date(arrived.val()).getTime() / 1000,
         place: bed.val(),
         city: dest.val(),
         address: dest.val(),

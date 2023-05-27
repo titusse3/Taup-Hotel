@@ -99,10 +99,16 @@
     transition: 1s all;
 }
 h6 {
-    /* visibility: hidden; */
-    color: red;
     font-size: 2em;
     margin: 0;
     margin-bottom: 2%;
     font-family: sans-serif;
+}
+
+.erreur {
+    color: red;
+}
+
+.good {
+    color: green;
 }

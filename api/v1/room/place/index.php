@@ -10,7 +10,17 @@
     include_once '../../.parse.php';
     [$response, $valid] = parse(
         [
-            'id',
+            'dfrom',
+            '/^\d+$/',
+            false
+        ],
+        [
+            'dto',
+            '/^\d+$/',
+            false
+        ],
+        [
+            'room',
             '/^[1-9]\d*$/',
             false
         ]
@@ -18,6 +28,12 @@
     if ($response['code'] == 'error') {
         echo json_encode($response);
         die(); 
+    }
+    if ($valid['dfrom'] > $valid['dto'] || $valid['dfrom'] < time()) {
+        $response['code'] = 'error';
+        $response['reason'] = array('Illegal value dto / dfrom.');
+        echo json_encode($response);
+        die();
     }
     include_once "../../.mysql.php";
     try {
@@ -34,14 +50,17 @@
         echo json_encode($response);
         die();
     }
-    $reqprep = $connexion->prepare('SELECT Y.ID, Y.NAME, (SELECT 
-        COALESCE(AVG(NOTE), 2.50) FROM NOTE WHERE R_ID = Y.ID) AS NOTE ,Y.PRICE, 
-        Y.PLACE, Y.DESCR, Y.TYPE, Y.DTO, X.ID AS HOTEL, X.NAME AS HOTEL_NAME, 
-        X.ADDRESS, X.CITY, X.COUNTRY, Y.IMG0, Y.IMG1, Y.IMG2, Y.IMG3, Y.IMG4 
-        FROM ROOM AS Y, HOTEL AS X WHERE Y.ID = :id AND X.ID = Y.HOTEL;');
-    $reqprep->bindParam(':id', $valid['id'], PDO::PARAM_INT);
+    $reqprep = $connexion->prepare('SELECT IF (TYPE = "DORMITORY", 
+        (SELECT (PLACE - MAX_RESERVE_D2D(CAST(FROM_UNIXTIME(:dfrom) AS DATE), 
+        CAST(FROM_UNIXTIME(:dto) AS DATE), ID))), 
+        (IF (MAX_RESERVE_D2D(CAST(FROM_UNIXTIME(:dfrom) AS DATE), 
+        CAST(FROM_UNIXTIME(:dto) AS DATE), ID) = 0, PLACE, 0))) AS RES 
+        FROM ROOM WHERE CAST(FROM_UNIXTIME(:dto) AS DATE) <= DTO AND ID = :id');
+    $reqprep->bindParam(':id', $valid['room'], PDO::PARAM_INT);
+    $reqprep->bindParam(':dto', $valid['dto'], PDO::PARAM_STR);
+    $reqprep->bindParam(':dfrom', $valid['dfrom'], PDO::PARAM_STR);
     try {
-        $reqprep->execute($valid);
+        $reqprep->execute();
     } catch (PDOException $e) {
         $response['code'] = 'error';
         $response['reason'] = array('Code ' . $e->getCode() 
@@ -49,13 +68,13 @@
         echo json_encode($response);
         die();
     }
-    $res = $reqprep->fetch(PDO::FETCH_ASSOC);
-    if ($res == false) {
-        $response['success'] = array('No result.');
+    if ($reqprep->rowCount() == 0) {
+        $response['code'] = 'error';
+        $response['reason'] = array('Unknown room avaible to this time.');
         echo json_encode($response);
-        die();   
+        die();
     }
-    $response['success'] = array('Result found.');
-    $response['data'] = $res;
+    $response['success'] = array('Room find.');
+    $response['place'] = $reqprep->fetch()['RES'];
     echo json_encode($response);
 ?>
