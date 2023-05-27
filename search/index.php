@@ -65,11 +65,13 @@
                 </select>
                 <select name="type" id="room-button">
                     <option selected="selected" disabled>Type</option>
+                    <option>Peu importe</option>
                     <option value="HOTEL">Hotel</option>
                     <option value="ROOM">Room</option>
                 </select>
                 <select name="type_room" id="type-room-button">
                     <option selected="selected" disabled>Type of Room</option>
+                    <option>Peu importe</option>
                     <option value="DORTORY">Dortory</option>
                     <option value="SOLO">Private Room</option>
                 </select>

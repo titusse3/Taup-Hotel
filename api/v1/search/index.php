@@ -172,33 +172,36 @@
         (MAX_RESERVE_D2D(CAST(FROM_UNIXTIME(:dfrom) AS DATE), 
         CAST(FROM_UNIXTIME(:dto) AS DATE), ROOM.ID) = 0 AND PLACE >= :place))');
     if (!isset($valid['type']) || $valid['type'] == null) {
-        $reqr = 'SELECT ROOM.ID, ROOM.NAME, PRICE, ROOM.IMG0, (SELECT IFNULL(AVG(NOTE), 
-        2.50) FROM NOTE WHERE R_ID = ROOM.ID) AS NOTE, TYPE, ADDRESS, CITY, 
-        COUNTRY FROM ROOM, HOTEL WHERE HOTEL.ID = ROOM.HOTEL';
+        $reqr = 'SELECT ROOM.ID, ROOM.NAME, PRICE, ROOM.IMG0, (SELECT 
+            COALESCE(AVG(NOTE), 2.50) FROM NOTE WHERE R_ID = ROOM.ID) AS NOTE, 
+            TYPE, ADDRESS, CITY, COUNTRY FROM ROOM, HOTEL WHERE HOTEL.ID = 
+            ROOM.HOTEL';
         if (count($room) > 0) {
             $reqr .= ' AND ';
             $reqr .= implode(' AND ', $room);
         }
-        $reqh = 'SELECT ID, NAME, (SELECT IFNULL(AVG(PRICE), 0) FROM ROOM WHERE 
-            HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT IFNULL(AVG(NOTE), 2.50) FROM 
-            NOTE WHERE R_ID IN (SELECT ID FROM ROOM WHERE HOTEL = HOTEL.ID)) 
-            AS NOTE, "HOTEL" AS TYPE, ADDRESS, CITY, COUNTRY FROM HOTEL';
+        $reqh = 'SELECT ID, NAME, (SELECT COALESCE(AVG(PRICE), 0) FROM ROOM 
+            WHERE HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT COALESCE(AVG(NOTE), 
+            2.50) FROM NOTE WHERE R_ID IN (SELECT ID FROM ROOM WHERE HOTEL = 
+            HOTEL.ID)) AS NOTE, "HOTEL" AS TYPE, ADDRESS, CITY, COUNTRY FROM
+            HOTEL';
         if (count($hotel) > 0) {
             $reqh .= ' WHERE ';
             $reqh .= implode(' AND ', $hotel);
         }
         $req = "($reqr) UNION ($reqh)";
     } else if ($valid['type'] == 'ROOM') {
-        $req = 'SELECT ROOM.ID, ROOM.NAME, PRICE, ROOM.IMG0, (SELECT IFNULL(AVG(NOTE), 
-        2.50) FROM NOTE WHERE R_ID = ROOM.ID) AS NOTE, TYPE, ADDRESS, CITY, 
-        COUNTRY FROM ROOM, HOTEL WHERE HOTEL.ID = ROOM.HOTEL';
+        $req = 'SELECT ROOM.ID, ROOM.NAME, PRICE, ROOM.IMG0, (SELECT 
+            COALESCE(AVG(NOTE), 2.50) FROM NOTE WHERE R_ID = ROOM.ID) AS NOTE, 
+            TYPE, ADDRESS, CITY, COUNTRY FROM ROOM, HOTEL WHERE HOTEL.ID = 
+            ROOM.HOTEL';
         if (count($room) > 0) {
             $req .= ' AND ';
             $req .= implode(' AND ', $room);
         }
     } else {
-        $req = 'SELECT ID, NAME, (SELECT IFNULL(AVG(PRICE), 0) FROM ROOM WHERE 
-            HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT IFNULL(AVG(NOTE), 2.50) FROM 
+        $req = 'SELECT ID, NAME, (SELECT COALESCE(AVG(PRICE), 0) FROM ROOM WHERE 
+            HOTEL = HOTEL.ID) AS PRICE, IMG0, (SELECT COALESCE(AVG(NOTE), 2.50) FROM 
             NOTE WHERE R_ID IN (SELECT ID FROM ROOM WHERE HOTEL = HOTEL.ID)) 
             AS NOTE, "HOTEL" AS TYPE, ADDRESS, CITY, COUNTRY FROM HOTEL';
         if (count($hotel) > 0) {

@@ -7,8 +7,4 @@
         return new PDO('mysql:host=' . HOST_DB . ';dbname=' . NAME_DB, USER_DB, 
             PWD_DB);
     }
-
-    function delogDB(&$connection) {
-        $connection = NULL;
-    }
 ?>

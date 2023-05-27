@@ -26,7 +26,6 @@ function daysBetween(startDate, endDate) {
 
 let next = null;
 const container = $('.contain-annonce');
-
 const form = $('form');
 const dest = $('input[name="dest"]');
 const name_ = $('input[name="name"]');
@@ -42,17 +41,14 @@ const currentDate = new Date();
 let year = currentDate.getFullYear();
 let month = String(currentDate.getMonth() + 1).padStart(2, '0');
 let day = String(currentDate.getDate()).padStart(2, '0');
-let formattedDate = year + '-' + month + '-' + day;
-
-departure.val(formattedDate)
+departure.val(year + '-' + month + '-' + day)
 
 currentDate.setDate(currentDate.getDate() + 7);
 year = currentDate.getFullYear();
 month = String(currentDate.getMonth() + 1).padStart(2, '0');
 day = String(currentDate.getDate()).padStart(2, '0');
-formattedDate = year + '-' + month + '-' + day;
+arrived.val(year + '-' + month + '-' + day);
 
-arrived.val(formattedDate);
 bed.val(1);
 
 fetch();
@@ -63,7 +59,8 @@ function addElement() {
     for (let i = 0; i < arguments.length; ++i) {
         const a = $('<a>', {
             class: 'annonce-block',
-            href: '../room/?id=' + arguments[i]['ID']
+            href: '../' + (arguments[i]['TYPE'] == 'HOTEL' ? 'hotel' : 'room')
+                + '/?id=' + arguments[i]['ID']
         });
         const img_block = $('<div>', {class: 'img-block'});
         const img_annonce = $('<img>', {
@@ -80,7 +77,9 @@ function addElement() {
         });
         const heart_block = $('<div>', {class: 'heart-block'});
         const heart = $('<img>', {src: '../src/img/heart.svg'});
-        const note = $('<h4>', {text: '4.69'});
+        const note = $('<h4>', {
+            text: parseFloat(arguments[i]['NOTE']).toFixed(2)
+        });
         const bottom_block = $('<div>', {class: 'bottom-block'});
         const info = $('<div>');
         const name = $('<h3>', {text: arguments[i]['NAME']});
@@ -112,56 +111,42 @@ function addElement() {
 }
 
 function fetch() {
-    const body = {};
-    body['dfrom'] = new Date(departure.val()).getTime();
-    body['dto'] = new Date(arrived.val()).getTime();
-    body['place'] = bed.val();
-    console.log(dest.val())
-    if (dest.val()) {
-        body['city'] = dest.val();
-        body['address'] = dest.val();
-        body['country'] = dest.val();
-    }
-    if (name_.val()) body['name'] = name_.val();
-    if (trie.val()) body['order'] = trie.val();
-    console.log(trie.val())
-    if (note.val()) body['min_note'] = note.val();
-    if (type.val()) body['type'] = type.val();
-    if (type_room.val()) body['type_room'] = type_room.val();
-    if (next) body['next'] = next;
-
-    $.post('../api/v1/search/', JSON.stringify(body), (data) => {
+    let body = {
+        dfrom: new Date(departure.val()).getTime(),
+        dto: new Date(arrived.val()).getTime(),
+        place: bed.val(),
+        city: dest.val(),
+        address: dest.val(),
+        country: dest.val(),
+        name: name_.val(),
+        order: trie.val(),
+        min_note: note.val(),
+        type: type.val(),
+        type_room: type_room.val(),
+        next: next
+    };
+    body = JSON.stringify(body, (_, value) => {if (value) return value})
+    $.post('../api/v1/search/', body, (data) => {
         if (data.code == 'good') {
             if (data.data) {
-                if (data.next) {
-                    next = data.next;
-                } else {
-                    next = null;
-                }
                 addElement(...data.data);
-            } else {
-                if (!next) {
-                    container.append($('<p>', {text: data.success[0]}));
-                }
-                next = null;
-            }
-        } else {
-            if (!next) {
-                container.append($('<p>', {text: data.success[0]}));
-            }
-            next = null;
-        }
+            } else if (!next) container.append($('<p>', {text: data.success[0]}));
+        } else if (!next) container.append($('<p>', {text: data.reason[0]}));
+        next = data.next || null;
     })
 }
 
 form.on('submit', event => {
     event.preventDefault();
     container.children().remove();
+    next = null;
     fetch();
 })
 
 $(window).on('scroll', event => {
-    if (next && $(this).scrollTop() > container.innerHeight() + container.offset().top - $('footer').innerHeight() - (container.children().first().innerHeight() || 0)) {
+    if (next && $(this).scrollTop() > container.innerHeight() 
+        + container.offset().top - $('footer').innerHeight() 
+        - (container.children().first().innerHeight() || 0)) {
         fetch();
     }
 })

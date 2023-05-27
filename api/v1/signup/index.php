@@ -99,5 +99,4 @@
     array_push($response['success'], 'Session create.');
     $response['token'] = $token;
     echo json_encode($response);
-    delogDB($connexion);
 ?>
