@@ -1,0 +1,15 @@
+*
+
+!*.php
+!*.js
+!*.css
+!*.tex
+!*.pdf
+!*.svg
+!*.jpeg
+!*.jpg
+!*.md
+!*.htaccess
+!*.sql
+!*.gitignore
+!LICENSE
