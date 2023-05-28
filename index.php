@@ -72,29 +72,29 @@
                 Dès le départ, Taup'Hotel s'est distingué par son attention
                 particulière aux détails et son engagement politique. Grâce à 
                 son emplacement stratégique, ces gardes du corps et son service 
-                amical, l'hôtel est rapidement devenu
-                une référence pour les voyageurs cherchant un hébergement abordable
-                sans compromis sur la qualité.
+                amical, l'hôtel est rapidement devenu une référence pour les 
+                voyageurs cherchant un hébergement abordable sans compromis sur 
+                la qualité.
                 <br />
                 <br />
                 Au fil des années, Taup'Hotel a continué de se développer et
                 d'ouvrir de nouvelles destinations à travers le pays. Notre
                 philosophie a toujours été de proposer des chambres et des dortoirs
-                propres et bien entretenus, avec un accueil chaleureux et un service
-                attentionné. Nous avons également su nous adapter aux besoins
-                changeants de nos clients en ajoutant des services complémentaires
-                tels que la réservation d'activités locales et le soutien à la
-                planification des voyages.
+                propres, sécurisé (à l'aide de cadenat) et bien entretenus, avec
+                un accueil chaleureux et un service attentionné. Nous avons 
+                également su nous adapter aux besoins
+                évoluant notre commerce d'hotel en une plateforme de réservation.
                 <br />
                 <br />
                 Aujourd'hui, Taup'Hotel est devenu une marque de confiance, reconnue
-                pour sa fiabilité et son engagement envers l'excellence. Notre
-                réseau d'hôtels s'étend à travers la France et au-delà, offrant aux
+                pour sa fiabilité et son engagement envers l'excellence, nous avons 
+                un chiffre d'affaire supérieur à ceux de grand groupe tel que Tesla ou encore Amazon. Notre
+                réseau d'hôtels s'étend à travers la France, Listanbourg et au-delà, offrant aux
                 voyageurs une expérience authentique et confortable, quel que soit
                 leur lieu de séjour. Que ce soit pour un voyage d'affaires, des
-                vacances en famille ou une escapade entre amis, Taup'Hotel est là
+                vacances en famille ou une escapade entre amis, un cavale, Taup'Hotel est là
                 pour vous accueillir avec une hospitalité sincère et un hébergement
-                de qualité.
+                de qualité et une protection sans faille.
             </p>
         </section>
         <section class="us us-reverse">

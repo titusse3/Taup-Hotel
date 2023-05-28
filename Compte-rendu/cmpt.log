@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.7)  27 MAY 2023 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.7)  28 MAY 2023 23:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/var/www/html/Taup-Hotel/Compte-rendu/cmpt.tex
-(/var/www/html/Taup-Hotel/Compte-rendu/cmpt.tex
+**/home/lurgrid/Documents/GitHub/Taup-Hotel/Compte-rendu/cmpt.tex
+(/home/lurgrid/Documents/GitHub/Taup-Hotel/Compte-rendu/cmpt.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -26,16 +26,16 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count193
 \U@D=\dimen139
-\l@unhyphenated=\language9
+\l@unhyphenated=\language87
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count194
  (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2021/07/20 v3.5m French support from the babel system
 Package babel Info: Hyphen rules for 'acadian' set to \l@french
-(babel)             (\language5). Reported on input line 91.
+(babel)             (\language14). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language5). Reported on input line 92.
+(babel)             (\language14). Reported on input line 92.
 \FB@nonchar=\count195
 Package babel Info: Making : an active character on input line 430.
 Package babel Info: Making ; an active character on input line 431.
@@ -604,18 +604,18 @@ Package rerunfilecheck Info: File `cmpt.out' has not changed.
 (rerunfilecheck)             Checksum: BA0AB23D73BC4611C83517558C38571D;1733.
  ) 
 Here is how much of TeX's memory you used:
- 17575 strings out of 480145
- 297726 string characters out of 5893301
- 630239 words of memory out of 5000000
- 35231 multiletter control sequences out of 15000+600000
+ 17575 strings out of 478287
+ 297777 string characters out of 5849290
+ 634939 words of memory out of 5000000
+ 35468 multiletter control sequences out of 15000+600000
  479860 words of font info for 49 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 94i,9n,117p,392b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/renauth6/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
-Output written on cmpt.pdf (7 pages, 131539 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 94i,9n,117p,409b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on cmpt.pdf (7 pages, 191540 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 143 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
