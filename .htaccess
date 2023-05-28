@@ -1,0 +1,9 @@
+# Deny access to files starting with a dot
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+

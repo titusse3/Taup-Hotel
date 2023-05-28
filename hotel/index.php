@@ -75,36 +75,31 @@
             <div class="chambre-contain">
                 <form class="filter">
                     Trier par
-                    <select id="trie-button">
-                        <option selected="selected" disabled>Prix</option>
-                        <option>Peu importe</option>
-                        <option>↑ (croissant)</option>
-                        <option>↓ (décroissant)</option>
+                    <select name="trie" id="trie-button">
+                        <option selected="selected" disabled>Price</option>
+                        <option value="">Peu importe</option>
+                        <option value="ASC">↑ (croissant)</option>
+                        <option value="DESC">↓ (décroissant)</option>
                     </select>
-                    <select id="etoile-button">
+                    <select name="note" id="etoile-button">
                         <option selected="selected" disabled>Notation</option>
-                        <option>Peu importe</option>
-                        <option>★</option>
-                        <option>★★</option>
-                        <option>★★★</option>
-                        <option>★★★★</option>
-                        <option>★★★★★</option>
+                        <option value="">Peu importe</option>
+                        <option value="1">★</option>
+                        <option value="2">★★</option>
+                        <option value="3">★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="5">★★★★★</option>
                     </select>
-                    <select>
-                        <option selected="selected" disabled>Type de Chambre</option>
-                        <option>Dortoire</option>
-                        <option>Chambre seule</option>
+                    <select name="type_room" id="type-room-button">
+                        <option selected="selected" disabled>Type of Room</option>
+                        <option value="">Peu importe</option>
+                        <option value="DORTORY">Dortory</option>
+                        <option value="SOLO">Private Room</option>
                     </select>
                     <input type="submit" value="Search" />
                 </form>
-                <?php
-                    include_once "../src/.article.php";
-                    for ($i = 0; $i < 7; ++$i) {
-                        for ($y = 0; $y < 2; ++$y) {
-                            article_show();
-                        }
-                    }
-                ?>
+                <div id="container">
+                </div>
             </div>
         </section>
     </main>

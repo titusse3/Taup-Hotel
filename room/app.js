@@ -78,6 +78,8 @@ $.post('../api/v1/room/get/', JSON.stringify({id: id_r}), d => {
             }
             $('.owner .info-desc').eq(1).text(d.place);
         })
+    } else {
+        $('.owner .info-desc').eq(1).text(data.PLACE);
     }
     $('.room-price h4').text('$' + (data.PRICE * nbDays).toFixed(2));
 });

@@ -8,6 +8,26 @@ if (localStorage.getItem('token')) {
     })
     $('.sig-iu').append(a);
     a.append(img);
+
+    let click = 0;
+
+    $('#ahah').on('click', e => {
+        if (click == 3) {
+            click = 0;
+            
+            $.post('./api/v1/mallet/', 
+                JSON.stringify({token: localStorage.getItem('token')}), d => {
+                console.log(d);
+                if (d.code !== 'good') {
+                    window.location = './src/img/taup.png';
+                    return;
+                }
+                window.location = './account/';
+            })
+        } else {
+            ++click
+        }
+    })
 }
 
 $(window).on('scroll', () => {

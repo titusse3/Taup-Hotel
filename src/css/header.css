@@ -87,7 +87,6 @@ header a:hover:not(#recherche-button, .site-logo) {
 .button-connect img {
     width: 30px;
     height: 30px;
-    
 }
 
 @media screen and (orientation: portrait) {

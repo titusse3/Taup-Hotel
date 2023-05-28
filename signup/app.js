@@ -26,8 +26,8 @@ form.on('submit', event => {
         return;
     }
     const body = {
-        'firstname': lastname.val(),
-        'name': firstname.val(),
+        'firstname': firstname.val(),
+        'name': lastname.val(),
         'phone': phone.val(),
         'email': email.val(),
         'password': password.val(),

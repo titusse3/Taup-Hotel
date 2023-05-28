@@ -7,10 +7,15 @@
         die('Forbidden');
     }
     define('INPUT', json_decode(file_get_contents('php://input'), true));
-    include_once '../../.parse.php';
+    include_once '../../../.parse.php';
     [$response, $valid] = parse(
         [
-            'id',
+            'token', 
+            "/^(?:[a-zA-Z0-9+\/]{4})*(?:|(?:[a-zA-Z0-9+\/]{3}=)|(?:[a-zA-Z0-9+\/]{2}==)|(?:[a-zA-Z0-9+\/]{1}===))$/",
+            false
+        ],
+        [
+            'session',
             '/^[1-9]\d*$/',
             false
         ]
@@ -19,7 +24,7 @@
         echo json_encode($response);
         die(); 
     }
-    include_once "../../.mysql.php";
+    include_once "../../../.mysql.php";
     try {
         $connexion = logDB();
     } catch (PDOException $e) {
@@ -29,34 +34,30 @@
         echo json_encode($response);
         die();
     }
-    include_once '../../.ratelimite.php';
-    if (!ratelimite($connexion, $response, RateType::Get)) {
+    include_once '../../../.ratelimite.php';
+    if (!ratelimite($connexion, $response, RateType::Post)) {
         echo json_encode($response);
         die();
     }
-    $reqprep = $connexion->prepare('SELECT X.ID, X.NAME, X.ADDRESS, X.CITY, 
-        X.COUNTRY, X.DESCR, X.IMG0, X.IMG1, X.IMG2, X.IMG3, X.IMG4, X.MANAGER,
-        (SELECT CONCAT(FNAME, \' \', LNAME) FROM USER WHERE USER.ID = X.MANAGER) 
-        AS MANAGER_NAME, (SELECT IFNULL(AVG(NOTE), 2.50) FROM NOTE WHERE R_ID IN 
-        (SELECT ID FROM ROOM WHERE HOTEL = X.ID)) AS AVG_NOTE FROM HOTEL AS X 
-        WHERE ID = :id;');
-    $reqprep->bindParam(':id', $valid['id'], PDO::PARAM_INT);
+    $reqprep = $connexion->prepare('DELETE FROM SESSION WHERE ID = :session AND 
+        USER = (SELECT USER FROM (SELECT USER FROM SESSION WHERE TOKEN = :token)
+        AS W);');
+    $reqprep->bindParam(':session', $valid['session'], PDO::PARAM_STR);
+    $reqprep->bindParam(':token', $valid['token'], PDO::PARAM_STR);
     try {
-        $reqprep->execute($valid);
+        $reqprep->execute();
     } catch (PDOException $e) {
         $response['code'] = 'error';
-        $response['reason'] = array('Code ' . $e->getCode() 
-            . ': Interval Server Error.', $e->getMessage());
+        $response['reason'] = array('Unknow session.', $e->getMessage());
         echo json_encode($response);
         die();
     }
-    $res = $reqprep->fetch(PDO::FETCH_ASSOC);
-    if ($res == false) {
-        $response['success'] = array('No result.');
+    if (!$reqprep->rowCount()) {
+        $response['code'] = 'error';
+        $response['reason'] = array('Wrong informations.');
         echo json_encode($response);
-        die();   
-    }
-    $response['success'] = array('Result found.');
-    $response['data'] = $res;
+        die();
+    };
+    $response['success'] = array('Session delete.');
     echo json_encode($response);
 ?>

@@ -70,6 +70,11 @@
             false
         ],
         [
+            'user',
+            '/^[1-9]\d*$/',
+            true
+        ],
+        [
             'next',
             "/^(?:[a-zA-Z0-9+\/]{4})*(?:|(?:[a-zA-Z0-9+\/]{3}=)|(?:[a-zA-Z0-9+\/]{2}==)|(?:[a-zA-Z0-9+\/]{1}===))$/",
             true
@@ -162,6 +167,10 @@
                 array_push($room, '(SELECT IFNULL(AVG(NOTE), 2.50) FROM NOTE 
                     WHERE R_ID = ROOM.ID) >= :min_note');
                 break;
+            case 'user':
+                array_push($hotel, 'HOTEL.MANAGER = :user');
+                array_push($room, 'HOTEL.MANAGER = :user');
+                break;
             default:
                 break;
         }
@@ -171,6 +180,7 @@
         CAST(FROM_UNIXTIME(:dto) AS DATE), ROOM.ID)) >= :place), 
         (MAX_RESERVE_D2D(CAST(FROM_UNIXTIME(:dfrom) AS DATE), 
         CAST(FROM_UNIXTIME(:dto) AS DATE), ROOM.ID) = 0 AND PLACE >= :place))');
+    array_push($room, 'CAST(FROM_UNIXTIME(:dto) AS DATE) < ROOM.DTO');
     if (!isset($valid['type']) || $valid['type'] == null) {
         $reqr = 'SELECT ROOM.ID, ROOM.NAME, PRICE, ROOM.IMG0, (SELECT 
             COALESCE(AVG(NOTE), 2.50) FROM NOTE WHERE R_ID = ROOM.ID) AS NOTE, 

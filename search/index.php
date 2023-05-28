@@ -50,13 +50,13 @@
                 Sort by
                 <select name="trie" id="trie-button">
                     <option selected="selected" disabled>Price</option>
-                    <option>Peu importe</option>
+                    <option value="">Peu importe</option>
                     <option value="ASC">↑ (croissant)</option>
                     <option value="DESC">↓ (décroissant)</option>
                 </select>
                 <select name="note" id="etoile-button">
                     <option selected="selected" disabled>Notation</option>
-                    <option>Peu importe</option>
+                    <option value="">Peu importe</option>
                     <option value="1">★</option>
                     <option value="2">★★</option>
                     <option value="3">★★★</option>
@@ -65,13 +65,13 @@
                 </select>
                 <select name="type" id="room-button">
                     <option selected="selected" disabled>Type</option>
-                    <option>Peu importe</option>
+                    <option value="">Peu importe</option>
                     <option value="HOTEL">Hotel</option>
                     <option value="ROOM">Room</option>
                 </select>
                 <select name="type_room" id="type-room-button">
                     <option selected="selected" disabled>Type of Room</option>
-                    <option>Peu importe</option>
+                    <option value="">Peu importe</option>
                     <option value="DORTORY">Dortory</option>
                     <option value="SOLO">Private Room</option>
                 </select>

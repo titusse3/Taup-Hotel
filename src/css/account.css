@@ -48,6 +48,14 @@ main > h4 {
     flex-direction: column;
     align-items: center;
 }
+
+.contain-past2 {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .personal-information > input {
     font-size: 1.2em;
     border-radius: 10px;
@@ -57,6 +65,7 @@ main > h4 {
 .personal-information > input[type="submit"]{
     box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.2);
     background-color: white;
+    color: black;
     border: none;
     cursor: pointer;
     width: 90%;
@@ -69,6 +78,7 @@ main > h4 {
     overflow: scroll;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 .annouce {
     height: 20%;
@@ -79,11 +89,19 @@ main > h4 {
     box-shadow: 0px 8px 15px rgba(8, 6, 6, 0.4);
     margin-bottom: 2%;
 }
-.annouce > img {
+.annouce > a > img {
     width: 20%;
     height: 100%;
     object-fit: contain;
+    margin: 0 20px 0 10px;
 }
+
+.annouce a {
+    width: 63%;
+    height: 100%;
+    display: flex;
+}
+
 .annouche-info {
     display: flex;
     flex-direction: column;
@@ -96,22 +114,44 @@ main > h4 {
 .annouche-info > h6, .annouche-info > h7 {
     margin: 0;
 }
+
+.annouce > form {
+    width: 12%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+}
+
 .star {
     width: 20%;
-    margin-left: 2%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 .star > img {
     filter: invert(1);
 }
 .annouce input {
-    width: 10%;
+    width: 100%;
     font-size: 1.2em;
     height: 30%;
     outline: none;
     border-radius: 10px;
     border: 1px solid #949494;
-    padding: 9px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.annouce input[name="perm"] {
+    width: 10%;
+    height: 50%;
+}
+
 .other-sec {
     margin-top: 4%;
 }
@@ -268,4 +308,42 @@ main > h4 {
 .button-id-disco img {
     width: 30px;
     height: 30px;
+}
+
+.disable-sign, .disable-sign:hover {
+    background-color: #efefef !important;
+    color: black !important;
+}
+
+.search-barre {
+    width: 100% !important;
+}
+
+.recherche-button-bar input[type="submit"] {
+    width: initial !important;
+}
+
+.boutton-contain {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%
+}
+
+.post-rh {
+    height: 20%;
+    font-size: 1.5em;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    background-color: #1D64EC;
+    color: white;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #949494;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
