@@ -1,5 +1,5 @@
 <?php
-    define('IMGUR_ID', 'ea333c2a4d2c199');
+    define('IMGUR_ID', '');
     function postImage($img) {
         $url = 'https://api.imgur.com/3/image';
         $data = array(
